@@ -41,7 +41,7 @@ getWeather.data.forEach((element)=>{
 
 function Weather(element2){
     this.forecast = element2.weather.description;
-    this.time = element2.datetime;
+    this.time = new Date(element2.datetime).toDateString();
     }
 
 app.get('*', (req, res) => {
