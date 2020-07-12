@@ -142,7 +142,7 @@ function Trail(trail) {
 
 
 function moviesHandler(request, response) {
-  let city = request.query.city;
+  let city = request.query.search_query;
   getMovies(city)
     .then(val => {
       response.status(200).json(val);
